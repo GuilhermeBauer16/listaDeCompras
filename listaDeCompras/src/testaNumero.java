@@ -1,15 +1,14 @@
 import java.util.Scanner;
 public class testaNumero {
     
-    public static double verificaNumero(String mensagem , double numero ){
+    public static double verificaNumeroDouble(String mensagem , double numero ){
         
-        boolean digitaNumero = false;
         Scanner scanner = new Scanner(System.in);
-        while(!digitaNumero){
+        while(true){
             System.out.print(mensagem);
-            if (scanner.hasNextInt()){
+            if (scanner.hasNextDouble()){
                 numero = scanner.nextDouble();
-                digitaNumero = true;
+                break;
 
             }else{
                 System.out.println("Porfavor digite um número!");
@@ -19,4 +18,19 @@ public class testaNumero {
 
         return numero ;
     }
+
+    public static int verificaNumeroInt(String mensagem , int numero){
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            System.out.print(mensagem);
+            if (scanner.hasNextInt()){
+                numero = scanner.nextInt();
+                break;
+            }else{
+                System.out.println("Por favor digite um número!");
+                scanner.nextLine();
+            }
+
+        }
+        return numero;    }
 }

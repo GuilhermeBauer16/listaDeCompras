@@ -1,8 +1,36 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        double numero = 0.0;
-        numero = testaNumero.verificaNumero("sua opção: ",numero);
+        int opcao = 0 ;
+        String linha = "--".repeat(30);
+        while (true) {
+            System.out.println(titulo("Lista de compras",30));
+            System.out.println("[1]Novo usuario ");
+            System.out.println("[2]Login ");
+            System.out.println("[3]Sair  ");
+            System.out.println(linha);
+            opcao = testaNumero.verificaNumeroInt("Sua opcão: ", opcao);
+
+            if (opcao == 1){
+
+            }else if (opcao == 2) {
+                
+            } else if (opcao == 3) {
+                break;
+                
+            }else{
+                System.out.println("Por favor selecione uma opção valida!");
+            }
+            
+            // if (usuario.veficaUsuario())
+            
+        }
+
+
+    }
+
+    public static String titulo(String mensagem , int numero){
+        String linha = "--".repeat(numero);
+        return linha + "\n "+ mensagem + "\n" + linha;
     }
 }
