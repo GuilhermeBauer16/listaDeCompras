@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
         int opcao = 0 ;
         String linha = "--".repeat(30);
+
         while (true) {
             System.out.println(titulo("Lista de compras",30));
             System.out.println("[1]Novo usuario ");
@@ -12,8 +14,20 @@ public class App {
             opcao = testaNumero.verificaNumeroInt("Sua opcão: ", opcao);
 
             if (opcao == 1){
-
+                Usuario criausuario = new Usuario();
+                System.out.print("nome: ");
+                String nome = scanner.next();
+                System.out.print("Senha: ");
+                String senha = scanner.next();
+                criausuario.setUsuario(nome, senha);
             }else if (opcao == 2) {
+                
+                System.out.print("Nome: ");
+                String nomeLogin = scanner.next();
+                System.out.print("Senha: ");
+                String senhaLogin = scanner.next();
+                String temUsuario = " ";
+                verificaUsuario(nomeLogin,senhaLogin);
                 
             } else if (opcao == 3) {
                 break;
