@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+        criandoParametro criandoParametro = new criandoParametro();
         ArrayList<Usuario> usuarios = new ArrayList<>();
         limpaTerminal limpaTerminal = new limpaTerminal();
         int opcao = 0 ;
@@ -10,39 +11,46 @@ public class App {
 
         while (true) {
             System.out.println(titulo("Lista de compras",30));
-            System.out.println("[1]Novo usuario ");
+            System.out.println("[1]Novo usuario " );
             System.out.println("[2]Login ");
             System.out.println("[3]Sair  ");
             System.out.println(linha);
-            opcao = testaNumero.verificaNumeroInt("Sua opcão: ", opcao);
+            opcao = criandoParametro.criaParametroInt("Sua opcão: ");
 
             if (opcao == 1){
 
                 System.out.println(titulo("Novo usuário", 30));
-                System.out.print("nome: ");
-                String nome = scanner.next();
-                System.out.print("Senha: ");
-                String senha = scanner.next();
+
+                String nome = criandoParametro.criaParametroString("Nome: ");
+                String senha = criandoParametro.criaParametroString("Senha: ");
                 Usuario criausuario = new Usuario(nome , senha);
                 usuarios.add(criausuario);
                 Thread.sleep(1000);
                 limpaTerminal.apagaTerminal();
             }else if (opcao == 2) {
+
                 System.out.println(titulo("login", 30));
-                System.out.print("Nome: ");
-                String nomeLogin = scanner.next();
-                System.out.print("Senha: ");
-                String senhaLogin = scanner.next();
+            
+                String nomeLogin = criandoParametro.criaParametroString("Nome: ");
+                String senhaLogin = criandoParametro.criaParametroString("Senha: ");
                 boolean temUsuario = false;
                 for ( Usuario usuario : usuarios ){
                     if (usuario.verificaUsuario(nomeLogin, senhaLogin)){
-                        temUsuario = true;
-                        break;
+                        String nomeProduto = criandoParametro.criaParametroString("Nome do produto: ");
+                        String marca = criandoParametro.criaParametroString("Nome da marca: ");
+                        double valor = criandoParametro.criaParametroDouble("Valor do produto:R$  ");
+                        int parcelas = criandoParametro.criaParametroInt("Quantidade de parcelas: ");
+                        String data = criandoParametro.criaParametroString("Data:  ");
+                        usuario.listaProduto(nomeProduto,marca,valor,parcelas,data);
+                        // temUsuario = true;
+                        // break;
                     }
                 }
 
                 if (temUsuario == true){
                     System.out.println("Ola");
+
+                    
                 }
                 
             } else if (opcao == 3) {
@@ -52,7 +60,7 @@ public class App {
                 System.out.println("Por favor selecione uma opção valida!");
             }
             
-            // if (usuario.veficaUsuario())
+            
             
         }
 
@@ -63,4 +71,6 @@ public class App {
         String linha = "--".repeat(numero);
         return linha + "\n "+ mensagem + "\n" + linha;
     }
+
+    
 }
