@@ -2,6 +2,7 @@
 public class Usuario {
     private String nome;
     private String senha;
+    listaProduto listaProduto;
 
     public Usuario(){
         
@@ -14,12 +15,12 @@ public class Usuario {
     }
 
     public boolean verificaUsuario(String nome , String senha){
-        if (this.nome == nome &&
-        this.senha == senha){
+        if (this.nome.equals(nome) &&
+        this.senha.equals(senha)){
             System.out.println("O usuario " + nome + " logado com sucesso");
             return true;
         }else{
-            System.out.println("O usuario" + nome + "não encontrado");
+            System.out.println("O usuario " + nome + " não encontrado");
             return false;
     }
 }

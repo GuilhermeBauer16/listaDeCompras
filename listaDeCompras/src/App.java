@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        limpaTerminal limpaTerminal = new limpaTerminal();
         int opcao = 0 ;
         String linha = "--".repeat(30);
 
@@ -15,23 +17,33 @@ public class App {
             opcao = testaNumero.verificaNumeroInt("Sua opcão: ", opcao);
 
             if (opcao == 1){
-                
+
+                System.out.println(titulo("Novo usuário", 30));
                 System.out.print("nome: ");
                 String nome = scanner.next();
                 System.out.print("Senha: ");
                 String senha = scanner.next();
                 Usuario criausuario = new Usuario(nome , senha);
-                // criausuario.setNome(nome);
-                // criausuario.setSenha(senha);
-                // System.out.println(criausuario.getNome());
+                usuarios.add(criausuario);
+                Thread.sleep(1000);
+                limpaTerminal.apagaTerminal();
             }else if (opcao == 2) {
-                
+                System.out.println(titulo("login", 30));
                 System.out.print("Nome: ");
                 String nomeLogin = scanner.next();
                 System.out.print("Senha: ");
                 String senhaLogin = scanner.next();
-                String temUsuario = " ";
-                // verificaUsuario(nomeLogin,senhaLogin);
+                boolean temUsuario = false;
+                for ( Usuario usuario : usuarios ){
+                    if (usuario.verificaUsuario(nomeLogin, senhaLogin)){
+                        temUsuario = true;
+                        break;
+                    }
+                }
+
+                if (temUsuario == true){
+                    System.out.println("Ola");
+                }
                 
             } else if (opcao == 3) {
                 break;
