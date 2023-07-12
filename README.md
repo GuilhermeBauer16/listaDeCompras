@@ -8,9 +8,13 @@ para  fazer o login.
 
 ## Exemplo de funcionamento 
 
-![image](https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/abd62576-8bc2-46db-9b68-cac27ac8cf00)
+![image](https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/1662ea1d-8663-4890-8a77-48d97a6b2cb4)
+
 
 ![image](https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/e2fb1ce7-96a3-434d-b75c-a40517a1f622)
+
+https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/7a339f13-0e64-4121-80ee-0683408c219e
+
 
 
 ## Aprendizado 
@@ -20,7 +24,7 @@ Foi um projeto com bastante aprendizado como por exemplo: como funcionam as clas
 
 ## Funcionalidades 
 
-* sistema de login: O usuário pode criar um usuario com nome e senha e efetuar seu login para acessar sua lista de compras.
+* sistema de login: O usuário pode criar um usuário com nome e senha e efetuar seu login para acessar sua lista de compras.
   
 * Lista de compras: O usuário poderá adicionar suas compras divido entre:
 
