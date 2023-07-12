@@ -1,10 +1,11 @@
-import java.util.Scanner;
+
 import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        
         criandoParametro criandoParametro = new criandoParametro();
         ArrayList<Usuario> usuarios = new ArrayList<>();
+        
         limpaTerminal limpaTerminal = new limpaTerminal();
         int opcao = 0 ;
         String linha = "--".repeat(30);
@@ -33,27 +34,54 @@ public class App {
             
                 String nomeLogin = criandoParametro.criaParametroString("Nome: ");
                 String senhaLogin = criandoParametro.criaParametroString("Senha: ");
-                boolean temUsuario = false;
+                Thread.sleep(1000);
+                
                 for ( Usuario usuario : usuarios ){
                     if (usuario.verificaUsuario(nomeLogin, senhaLogin)){
-                        String nomeProduto = criandoParametro.criaParametroString("Nome do produto: ");
-                        String marca = criandoParametro.criaParametroString("Nome da marca: ");
-                        double valor = criandoParametro.criaParametroDouble("Valor do produto:R$  ");
-                        int parcelas = criandoParametro.criaParametroInt("Quantidade de parcelas: ");
-                        String data = criandoParametro.criaParametroString("Data:  ");
-                        usuario.listaProduto(nomeProduto,marca,valor,parcelas,data);
-                        // temUsuario = true;
-                        // break;
+                        limpaTerminal.apagaTerminal();
+                        while (true){
+                            System.out.println(titulo("Funções" , 30));
+                            System.out.println("[1] Novo produto ");
+                            System.out.println("[2] Ver produtos ");
+                            System.out.println("[3] Sair ");
+                            System.out.println(linha);
+                            int opcaoFuncoes = criandoParametro.criaParametroInt("sua opcão: ");
+
+                            if (opcaoFuncoes == 1){
+
+                                System.out.println(titulo("Novo produto" , 30));
+                                String nomeProduto = criandoParametro.criaParametroString("Nome do produto: ");
+                                String marca = criandoParametro.criaParametroString("Nome da marca: ");
+                                double valor = criandoParametro.criaParametroDouble("Valor do produto:R$  ");
+                                int parcelas = criandoParametro.criaParametroInt("Quantidade de parcelas: ");
+                                String data = criandoParametro.criaParametroString("Data:  ");
+                                listaProduto novoProduto = new listaProduto(nomeProduto,marca,valor,parcelas,data);
+                                usuario.listaProdutos.add(novoProduto);
+                                limpaTerminal.apagaTerminal();
+                                
+                            }else if (opcaoFuncoes == 2){
+                                System.out.println(titulo("Lista de produtos", 30));
+                                usuario.mostraListaProdutos();
+                                System.out.println(linha);
+
+                            }else if (opcaoFuncoes == 3){
+                                System.out.println("voltando para o menu de usuário");
+                                Thread.sleep(1000);
+                                limpaTerminal.apagaTerminal();
+                                break;
+                            }
+                            
+                        }
+
                     }
-                }
+                        
 
-                if (temUsuario == true){
-                    System.out.println("Ola");
-
-                    
+                  
                 }
                 
             } else if (opcao == 3) {
+                System.out.println("saindo...");
+                Thread.sleep(1000);
                 break;
                 
             }else{
