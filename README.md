@@ -8,5 +8,10 @@ para  fazer o login.
 
 ## Exemplo de funcionamento 
 
+## Aprendizado 
+Foi um projeto com bastante aprendizado como por exemplo: como funcionam as classes e objetos
+, além de como funcionam as classes herdadas, as classes "mãe" e "filho", o polimorfismo e como chamar as classes mais 
+"genéricas", além do conceito dos atributos public, private e protected.
+
 
 
