@@ -8,6 +8,11 @@ para  fazer o login.
 
 ## Exemplo de funcionamento 
 
+![image](https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/abd62576-8bc2-46db-9b68-cac27ac8cf00)
+
+![image](https://github.com/GuilhermeBauer16/listaDeCompras/assets/123701893/e2fb1ce7-96a3-434d-b75c-a40517a1f622)
+
+
 ## Aprendizado 
 Foi um projeto com bastante aprendizado como por exemplo: como funcionam as classes e objetos
 , além de como funcionam as classes herdadas, as classes "mãe" e "filho", o polimorfismo e como chamar as classes mais 
@@ -29,7 +34,7 @@ Foi um projeto com bastante aprendizado como por exemplo: como funcionam as clas
  
     * Data: O usuário poderá adicionar a data da compra.
  
-* Visualização de compras: O usuário poderá ver as compras que ele adicionou.
+* Visualização de compras: O usuário poderá vesializar compras que ele adicionou.
 
 ## Autor 
 
