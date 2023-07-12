@@ -13,5 +13,21 @@ Foi um projeto com bastante aprendizado como por exemplo: como funcionam as clas
 , além de como funcionam as classes herdadas, as classes "mãe" e "filho", o polimorfismo e como chamar as classes mais 
 "genéricas", além do conceito dos atributos public, private e protected.
 
+## Funcionalidades 
 
+* sistema de login: O usuário pode criar um usuario com nome e senha e efetuar seu login para acessar sua lista de compra.
+  
+* Lista de compras: O usuário poderá adicionar suas compras divido entre:
+
+    * Nome do produto: O usuário poderá adicionar o nome do produto.
+ 
+    * Marca: O usuário poderá adicionar a marca do produto.
+ 
+    * Valor: O usuário poderá adicionar o valor(R$) do produto.
+ 
+    * parcelas:  O usuário poderá adicionar quantas parcelas foram divido o produto.
+ 
+    * Data: O usuário poderá adicionar a data da compra.
+ 
+* Visualização de compras: O usuário poderá ver as compras que ele adicionou.
 
