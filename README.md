@@ -15,7 +15,7 @@ Foi um projeto com bastante aprendizado como por exemplo: como funcionam as clas
 
 ## Funcionalidades 
 
-* sistema de login: O usuário pode criar um usuario com nome e senha e efetuar seu login para acessar sua lista de compra.
+* sistema de login: O usuário pode criar um usuario com nome e senha e efetuar seu login para acessar sua lista de compras.
   
 * Lista de compras: O usuário poderá adicionar suas compras divido entre:
 
@@ -31,3 +31,6 @@ Foi um projeto com bastante aprendizado como por exemplo: como funcionam as clas
  
 * Visualização de compras: O usuário poderá ver as compras que ele adicionou.
 
+## Autor 
+
+ www.linkedin.com/in/guilherme-bauer-desenvolvedor
